@@ -1,0 +1,35 @@
+DROP TABLE IF EXISTS conversation;
+DROP TABLE IF EXISTS dataset;
+DROP TABLE IF EXISTS document;
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE document (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    author TEXT,
+    created DATE
+);
+
+CREATE TABLE dataset (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    document_id INTEGER NOT NULL,
+    n INTEGER UNIQUE NOT NULL,
+    question TEXT UNIQUE NOT NULL,
+    answer TEXT NOT NULL,
+    reference TEXT NOT NULL,
+    FOREIGN KEY (document_id) REFERENCES document (id)
+);
+
+CREATE TABLE conversation (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    answered INTEGER DEFAULT 0 CHECK ( answered in ( 0, 1 ) ),
+    question TEXT NOT NULL,
+    answer TEXT NOT NULL
+);
