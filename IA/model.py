@@ -556,7 +556,7 @@ class Model:
             raise Exception('Invalid dataset type! Set another.')
 
 
-DATASET = Dataset('data/dataset.csv', ascii=False)
+DATASET = Dataset('IA/data/dataset.csv', ascii=False)
 NUM_LAYERS = 2
 D_MODEL = 256
 NUM_HEADS = 8
@@ -572,7 +572,8 @@ model = Model(dataset=DATASET,
               num_layers=NUM_LAYERS)
 
 model.compile()
-# model.fit(EPOCHS, save_weights_file='test_com_acento.hdf5')
-# model.load_weights('test.hdf5')
-model.load_weights('test_com_acento.hdf5')
-output = model.predict('Qual o fim útil do homem?')
+model.load_weights('IA/test_com_acento.hdf5')
+
+# # model.fit(EPOCHS, save_weights_file='test_com_acento.hdf5')
+# # model.load_weights('test.hdf5')
+# output = model.predict('Qual o fim útil do homem?')
