@@ -1,3 +1,4 @@
+pip==20.0.2
 absl-py==0.9.0
 astor==0.8.1
 attrs==19.3.0
@@ -59,7 +60,6 @@ pandocfilters==1.4.2
 parso==0.5.2
 pdfminer3==2018.12.3.0
 pickleshare==0.7.5
-pip==19.3.1
 prometheus-client==0.7.1
 promise==2.3
 prompt-toolkit==3.0.2
