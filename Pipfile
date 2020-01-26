@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+pip = ">=20"
 pandas = "*"
 requests = "*"
 nltk = "*"
@@ -21,7 +22,6 @@ pydot = "*"
 graphviz = "*"
 pydotplus = "*"
 python-telegram-bot = "*"
-pip = "*"
 
 [requires]
 python_version = "3.7"
