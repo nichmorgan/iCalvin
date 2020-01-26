@@ -21,6 +21,7 @@ pydot = "*"
 graphviz = "*"
 pydotplus = "*"
 python-telegram-bot = "*"
+pip = "*"
 
 [requires]
 python_version = "3.7"
