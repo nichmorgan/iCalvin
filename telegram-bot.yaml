@@ -1,6 +1,6 @@
 runtime: python
 env: flex
-entrypoint: python telegram_bot/chat.py
+entrypoint: python -c "import telegram_bot.chat"
 
 runtime_config:
   python_version: 3.7
