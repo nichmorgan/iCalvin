@@ -40,7 +40,7 @@ opt-einsum==3.1.0
 pandas==0.25.3
 pdfminer3==2018.12.3.0
 promise==2.3
-protobuf==3.11.2
+protobuf==3.18.3
 pyasn1-modules==0.2.8
 pyasn1==0.4.8
 pycparser==2.19
